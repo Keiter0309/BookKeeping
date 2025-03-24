@@ -158,4 +158,13 @@
       </div>
     </footer>
   </body>
+  <script>
+    // Toggle menu for navbar on mobile
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </html>
