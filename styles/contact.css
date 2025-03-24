@@ -3,31 +3,34 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Top Bar Styles */
 .top-bar {
   background: #f5f7fa;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
 .top-bar-container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px;
+  text-align: left;
 }
 
 .top-bar p {
   font-size: 14px;
   color: #555;
+  text-align: left;
 }
 
 .top-bar-link {
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
+  text-align: left;
 }
 
 .top-bar-link:hover {

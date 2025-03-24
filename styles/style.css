@@ -15,20 +15,22 @@
 }
 
 .top-bar-container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px;
+  text-align: left;
 }
 
 .top-bar p {
   font-size: 14px;
   color: #555;
+  text-align: left;
 }
 
 .top-bar-link {
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
+  text-align: left;
 }
 
 .top-bar-link:hover {
