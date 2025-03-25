@@ -532,7 +532,6 @@ p {
   flex: 1;
   border-radius: 20px;
   padding: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
 .form-wrapper img {
