@@ -8,7 +8,10 @@
             "無界人",
             "信用小白",
             "優秀儲備"
-        ]
+        ],
+        "image": {
+            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0PO6lVNqDuymeNRVbcoVRfaBGIDJN3zF59w&s"
+        }
     },
     "newApplications": {
         "title": "新顧應用",
