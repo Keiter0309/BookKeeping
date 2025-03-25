@@ -62,37 +62,18 @@
       </div>
     </section>
 
-    <section class="free-consultation">
-      <div class="buttons-container">
-        <!-- Call Button -->
-        <button class="call-button" onclick="makeCall()">
-          <svg
-            class="phone-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
-            />
-          </svg>
-        </button>
+    <section class="buttons-container">
+      <!-- Call Button -->
+      <a href="tel:0928043112" class="button call-button"> 立即通話 </a>
 
-        <!-- Consultation Button -->
-        <button class="consultation-button" onclick="showLineLink()">
-          免費諮詢
-        </button>
-
-        <a
-          href="https://line.me/ti/p/5j9yYsXE07"
-          class="line-link"
-          id="lineLink"
-          target="_blank"
-        >
-          
-          </svg>
-          聯繫我們的LINE
-        </a>
-      </div>
+      <!-- LINE Button -->
+      <a
+        href="https://line.me/ti/p/5j9yYsXE07"
+        target="_blank"
+        class="button line-button"
+      >
+        LINE諮詢
+      </a>
     </section>
 
     <!-- Footer -->
@@ -208,19 +189,6 @@
     `;
         })
         .catch((error) => console.error("Error loading content:", error));
-
-      function makeCall() {
-        window.location.href = "tel:0928043112";
-      }
-
-      function showLineLink() {
-        const lineLink = document.getElementById("lineLink");
-        if (lineLink.style.display === "flex") {
-          lineLink.style.display = "none";
-        } else {
-          lineLink.style.display = "flex";
-        }
-      }
     </script>
   </body>
 </html>

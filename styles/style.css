@@ -683,113 +683,61 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.free-consultation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.phone-icon:hover {
+  fill: white;
 }
 
 .buttons-container {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px;
-  max-width: 300px;
-  width: 100%;
+  margin: 20px 0;
 }
 
-.call-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  color: white;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s, transform 0.2s;
-  position: absolute;
-  border: 1px solid #cccc;
-  top: 0;
-  right: 0;
-}
-
-.call-button:hover {
-  background-color: #1976d2;
-  transform: scale(1.1);
-}
-
-.consultation-button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 144px;
   height: 44px;
-  background-color: white;
-  color: #2196f3;
+  border-radius: 6px;
   font-size: 16px;
   font-weight: 600;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
-  border: 1px solid #cccc;
-}
-
-.consultation-button:hover {
-  background-color: #2196f3;
-  color: white;
-}
-
-.button-dimensions {
-  font-size: 12px;
-  color: #999;
-  margin-top: 5px;
-}
-
-.line-link {
-  display: none;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background-color: white;
-  color: #06c755;
+  transition: all 0.3s;
   text-decoration: none;
-  font-weight: 500;
-  border: 1px solid #cccc;
-  transition: background-color 0.3s;
-}
-
-.line-link:hover {
-  background-color: #05a648;
+  border: none;
   color: white;
 }
 
-.content-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
+.call-button {
+  color: #2196f3;
+  border: 1px solid #ccc;
+  background-color: transparent;
 }
 
-.content-box {
-  width: 120px;
-  height: 120px;
-  background-color: #e0e0e0;
+.call-button:hover {
+  color: white;
+  transform: translateY(-2px);
+  background-color: #2196f3;
 }
 
-/* Phone icon */
-.phone-icon {
-  width: 18px;
-  height: 18px;
-  fill: #2196f3;
+.line-button {
+  color: #06c755;
+  border: 1px solid #ccc;
+  background-color: transparent;
 }
 
-.phone-icon:hover {
-  fill: white
+.line-button:hover {
+  color: white;
+  transform: translateY(-2px);
+  background-color: #06c755;
 }
 
-
+.button-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: white;
+}
