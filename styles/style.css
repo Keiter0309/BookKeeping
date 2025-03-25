@@ -687,6 +687,17 @@
   fill: white;
 }
 
+.free-consultation h2 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+
 .buttons-container {
   display: flex;
   justify-content: center;
