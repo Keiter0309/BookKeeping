@@ -322,9 +322,6 @@
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 20px;
 }
 
@@ -437,7 +434,7 @@
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -496,23 +493,27 @@ p {
 }
 
 .call-button {
-  background-color: #2196f3;
+  color: #2196f3;
+  border: 1px solid #ccc;
+  background-color: transparent;
 }
 
 .call-button:hover {
-  background-color: #1976d2;
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+  background-color: #2196f3;
 }
 
 .line-button {
-  background-color: #06c755;
+  color: #06c755;
+  border: 1px solid #ccc;
+  background-color: transparent;
 }
 
 .line-button:hover {
-  background-color: #05a648;
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(6, 199, 85, 0.3);
+  background-color: #06c755;
 }
 
 .button-icon {
@@ -529,10 +530,15 @@ p {
 
 .form-wrapper {
   flex: 1;
-  background-color: white;
-  border-radius: 10px;
-  padding: 40px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 
 .form-group {

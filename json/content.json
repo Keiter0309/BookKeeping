@@ -29,7 +29,10 @@
         "土地/房屋",
 		"家電/手機",
 		"汽車/機車"
-      ]
+      ],
+      "image": {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0PO6lVNqDuymeNRVbcoVRfaBGIDJN3zF59w&s"
+      }
     }
   },
   "services": [

@@ -538,9 +538,6 @@
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 20px;
 }
 
@@ -709,7 +706,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #2196f3;
+  background-color: white;
   color: white;
   border-radius: 50%;
   font-size: 16px;
@@ -717,6 +714,7 @@
   border: none;
   transition: background-color 0.3s, transform 0.2s;
   position: absolute;
+  border: 1px solid #cccc;
   top: 0;
   right: 0;
 }
@@ -732,18 +730,19 @@
   justify-content: center;
   width: 144px;
   height: 44px;
-  background-color: #2196f3;
-  color: white;
+  background-color: white;
+  color: #2196f3;
   font-size: 16px;
   font-weight: 600;
-  border-radius: 4px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 1px solid #cccc;
 }
 
 .consultation-button:hover {
-  background-color: #1976d2;
+  background-color: #2196f3;
+  color: white;
 }
 
 .button-dimensions {
@@ -756,16 +755,17 @@
   display: none;
   margin-top: 15px;
   padding: 10px 15px;
-  background-color: #06c755;
-  color: white;
+  background-color: white;
+  color: #06c755;
   text-decoration: none;
-  border-radius: 4px;
   font-weight: 500;
+  border: 1px solid #cccc;
   transition: background-color 0.3s;
 }
 
 .line-link:hover {
   background-color: #05a648;
+  color: white;
 }
 
 .content-boxes {
@@ -785,13 +785,11 @@
 .phone-icon {
   width: 18px;
   height: 18px;
-  fill: white;
+  fill: #2196f3;
 }
 
-/* LINE icon */
-.line-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  fill: white;
+.phone-icon:hover {
+  fill: white
 }
+
+
