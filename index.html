@@ -124,91 +124,102 @@
         navLinks.classList.toggle("active");
       });
 
-      // Load services from services.json
-      fetch("./json/services.json")
+      // Load all data from content.json
+      fetch("./json/content.json")
         .then((response) => response.json())
         .then((data) => {
-          const container = document.getElementById("services-container");
-          data.forEach((service) => {
+          // Load services
+          const servicesContainer =
+            document.getElementById("services-container");
+          data.services.forEach((service) => {
             const serviceItem = `
-                        <div class="service-item">
-                            <div class="hexagon">
-                                <i class="${service.icon}"></i>
-                            </div>
-                            <h3>${service.title}</h3>
-                            <p>${service.description}</p>
-                        </div>
-                    `;
-            container.innerHTML += serviceItem;
+        <div class="service-item">
+          <div class="hexagon">
+            <i class="${service.icon}"></i>
+          </div>
+          <h3>${service.title}</h3>
+          <p>${service.description}</p>
+        </div>
+      `;
+            servicesContainer.innerHTML += serviceItem;
           });
-        })
-        .catch((error) => console.error("Error loading services:", error));
 
-      fetch("./json/resources.json")
-        .then((response) => response.json())
-        .then((resourcesData) => {
-          const container = document.getElementById("resources-container");
-          container.innerHTML = `
-            <div class="resources-columns">
-              <div class="resources-column">
-                <h3>${resourcesData.resources.title}</h3>
-                <div class="resources-items">
-                  ${resourcesData.resources.items
-                    .map(
-                      (item) => `
-                    <div class="resource-item">
-                      <img src="${resourcesData.resources.image.url}" alt="Resource Icon" class="resource-image" />
-                      <span class="resource-text">${item}</span>
-                    </div>
-                  `
-                    )
-                    .join("")}
-                </div>
-              </div>
-              <div class="resources-column">
-                <h3>${resourcesData.newApplications.title}</h3>
-                <div class="resources-items">
-                  ${resourcesData.newApplications.items
-                    .map(
-                      (item) => `
-                    <div class="resource-item">
-                      <img src="${resourcesData.resources.image.url}" alt="Resource Icon" class="resource-image" />
-                      <span class="resource-text">${item}</span>
-                    </div>
-                  `
-                    )
-                    .join("")}
-                </div>
-              </div>
-            </div>
-          `;
-        })
-        .catch((error) => console.error("Error loading resources:", error));
+          // Load resources
+          const resourcesContainer = document.getElementById(
+            "resources-container"
+          );
+          resourcesContainer.innerHTML = `
+      <div class="resources-columns">
+        <div class="column-items">
 
-      // Load features
-      fetch("./json/features.json")
-        .then((response) => response.json())
-        .then((featuresData) => {
-          const container = document.getElementById("features-container");
-          container.innerHTML = `
-            <div class="feature-list">
-              ${featuresData
+          <div class="resources-column-image">
+            <img src="${
+              data.resources.resources.image.url
+            }" alt="Resource Icon" class="resource-image" />
+          </div>
+          <div class="resources-column">
+            
+            <h3>${data.resources.resources.title}</h3>
+            <div class="resources-items">
+              ${data.resources.resources.items
                 .map(
-                  (feature, index) => `
-                <div class="feature-item">
-                  <div class="number-container">
-                    <div class="number-bg"></div>
-                    <div class="number">${index + 1}</div>
-                  </div>
-                  <div class="feature-text">${feature}</div>
+                  (item) => `
+                <div class="resource-item">
+                  <span class="resource-text">${item}</span>
                 </div>
               `
                 )
                 .join("")}
             </div>
-          `;
+            </div>
+        </div>
+        <div class="column-items">
+          <div class="resources-column-image">
+            <img src="${
+              data.resources.resources.image.url
+            }" alt="Resource Icon" class="resource-image" />
+          </div>
+          <div class="resources-column">
+            
+            <h3>${data.resources.newApplications.title}</h3>
+            <div class="resources-items">
+              ${data.resources.newApplications.items
+                .map(
+                  (item) => `
+                <div class="resource-item">
+                  <span class="resource-text">${item}</span>
+                </div>
+              `
+                )
+                .join("")}
+            </div>
+            </div>
+        </div>
+      </div>
+    `;
+
+          // Load features
+          const featuresContainer =
+            document.getElementById("features-container");
+          featuresContainer.innerHTML = `
+      <div class="feature-list">
+        ${data.features
+          .map(
+            (feature, index) => `
+          <div class="feature-item">
+            <div class="number-container">
+              <div class="number-bg"></div>
+              <div class="number">${index + 1}</div>
+            </div>
+            <div class="feature-text">${feature}</div>
+          </div>
+        `
+          )
+          .join("")}
+      </div>
+    `;
         })
-        .catch((error) => console.error("Error loading features:", error));
+        .catch((error) => console.error("Error loading content:", error));
 
       function makeCall() {
         window.location.href = "tel:0928043112";
