@@ -6,17 +6,19 @@
 }
 
 body {
-  font-family: 'Noto Sans TC', sans-serif;
-  line-height: 1.6;
-  color: #333;
+  font-family: 'Noto Serif TC', 'Noto Sans TC', sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
   scroll-behavior: smooth;
+  background-color: #fafaf8;
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #2c3e50;
-  color: white;
-  padding: 8px 0;
+  background-color: #8b0000;
+  color: #fff8dc;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 248, 220, 0.2);
 }
 
 .top-bar-container {
@@ -54,10 +56,12 @@ body {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
-  color: #333;
+  color: #8b0000;
   transition: transform 0.3s;
+  font-family: 'Noto Serif TC', serif;
+  letter-spacing: 1px;
 }
 
 .logo:hover {
