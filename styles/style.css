@@ -1,54 +1,54 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.6;
+  color: #333;
   scroll-behavior: smooth;
 }
 
-/* Top Bar Styles */
+/* Top Bar */
 .top-bar {
-  background: #f5f7fa;
-  padding: 10px 0;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+  background-color: #2c3e50;
+  color: white;
+  padding: 8px 0;
 }
 
 .top-bar-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
-  text-align: left;
-}
-
-.top-bar p {
-  font-size: 14px;
-  color: #555;
-  text-align: left;
+  padding: 0 20px;
+  text-align: right;
 }
 
 .top-bar-link {
-  color: #007bff;
+  color: white;
   text-decoration: none;
+  margin: 0 10px;
   transition: color 0.3s;
-  text-align: left;
 }
 
 .top-bar-link:hover {
-  color: #0056b3;
+  color: #ecf0f1;
 }
 
 .top-bar-link i {
   margin-right: 5px;
 }
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #ffffff, #f5f7fa);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
