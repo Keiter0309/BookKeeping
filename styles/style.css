@@ -351,6 +351,10 @@
   gap: 20px;
 }
 
+.resources-columns a {
+  text-decoration: none;
+}
+
 .resources-column {
   flex: 1;
 }

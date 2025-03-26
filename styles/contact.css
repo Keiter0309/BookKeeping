@@ -9,9 +9,10 @@
 /* Top Bar Styles */
 .top-bar {
   background: #f5f7fa;
-  /* padding: 10px 0; */
+  padding: 10px 0;
   text-align: center;
   border-bottom: 1px solid #ddd;
+
 }
 
 .top-bar-container {
@@ -461,12 +462,6 @@ h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
-}
-
-p {
-  margin-top: 20px;
-  color: #666;
-  line-height: 1.6;
 }
 
 .buttons-container {
