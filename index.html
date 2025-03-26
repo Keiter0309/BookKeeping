@@ -38,8 +38,7 @@
           <i class="fas fa-bars"></i>
         </div>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">聯繫我們</a></li>
         </ul>
       </nav>
     </header>
@@ -196,11 +195,19 @@
 
           // Load advantages
           const advantagesContainer = document.getElementById("advantages-container");
+          const advantageIcons = [
+            "fas fa-file-contract",
+            "fas fa-hand-holding-usd",
+            "fas fa-handshake",
+            "fas fa-user-secret",
+            "fas fa-percentage",
+            "fas fa-users"
+          ];
           advantagesContainer.innerHTML = `
             <div class="advantages-grid">
               ${data.advantages.map((advantage, index) => `
                 <div class="advantage-item">
-                  <div class="advantage-number">${index + 1}</div>
+                  <div class="advantage-number"><i class="${advantageIcons[index]}"></i></div>
                   <p>${advantage}</p>
                 </div>
               `).join('')}
