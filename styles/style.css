@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Noto Serif TC', 'Noto Sans TC', sans-serif;
+  font-family: "Noto Serif TC", "Noto Sans TC", sans-serif;
   line-height: 1.8;
   color: #1a1a1a;
   scroll-behavior: smooth;
@@ -47,7 +47,7 @@ body {
 .navbar {
   background-color: white;
   padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +60,7 @@ body {
   font-weight: 700;
   color: #8b0000;
   transition: transform 0.3s;
-  font-family: 'Noto Serif TC', serif;
+  font-family: "Noto Serif TC", serif;
   letter-spacing: 1px;
 }
 
@@ -163,22 +163,6 @@ body {
   cursor: pointer;
 }
 
-/* What We Do Section Styles */
-.what-we-do {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #f5f7fa, #e8ecef);
-  text-align: center;
-}
-
-.what-we-do h2 {
-  font-size: 40px;
-  color: #333;
-  margin-bottom: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .underline {
   width: 60px;
   height: 3px;
@@ -193,6 +177,16 @@ body {
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
+}
+
+.services h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .service-item {
@@ -294,7 +288,7 @@ body {
 }
 
 .banner::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -305,7 +299,7 @@ body {
 }
 
 .banner-text h1 {
-  font-family: 'Noto Serif TC', serif;
+  font-family: "Noto Serif TC", serif;
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -333,6 +327,69 @@ body {
 .banner-description {
   font-size: 1.4rem;
   letter-spacing: 2px;
+}
+
+.video-section {
+  position: relative;
+  padding: 5px 0;
+}
+
+.video-background {
+  background: url("your-path") no-repeat center center/cover;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-content {
+  text-align: center;
+  color: #fff;
+}
+
+
+.image-section {
+  position: relative;
+  padding: 5px 0;
+}
+
+.image-background {
+  background: url("your-path") no-repeat center center/cover;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-content {
+  text-align: center;
+  color: #fff;
 }
 
 .trust-section {
@@ -372,7 +429,7 @@ body {
 }
 
 .trust-item h3 {
-  font-family: 'Noto Serif TC', serif;
+  font-family: "Noto Serif TC", serif;
   font-size: 1.5rem;
   color: #1a1a1a;
   margin-bottom: 15px;
@@ -449,135 +506,6 @@ body {
   display: flex;
   gap: 15px;
   padding-bottom: 5rem;
-}
-
-/* Features Section Styles */
-.features {
-  padding: 60px 20px;
-  background: #f0f2f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  max-width: 1200px;
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  position: relative;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, #4a6cf7, #6e8fff);
-}
-
-.card-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid #eaeef2;
-}
-
-.card-header h2 {
-  color: #1a202c;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.card-body {
-  padding: 1.5rem;
-}
-
-.features-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.feature-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-  border-color: #e2e8f0;
-  background-color: #f8fafc;
-  transform: translateY(-2px);
-}
-
-.number-container {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.number-bg {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: #edf2ff;
-  border-radius: 10px;
-  transform: rotate(45deg);
-}
-
-.number {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #4a6cf7;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.feature-text {
-  color: #4a5568;
-  line-height: 1.6;
-}
-
-.card-footer {
-  padding: 1.5rem;
-  background-color: #f8fafc;
-  border-top: 1px solid #eaeef2;
-  display: flex;
-  justify-content: center;
-}
-
-.action-button {
-  padding: 0.75rem 2.5rem;
-  background-color: #4a6cf7;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(74, 108, 247, 0.2);
-}
-
-.action-button:hover {
-  background-color: #3a5af1;
-  box-shadow: 0 6px 16px rgba(74, 108, 247, 0.3);
 }
 
 /* Footer Styles */
@@ -667,6 +595,10 @@ body {
     gap: 10px;
   }
 
+  .trust-container {
+    grid-template-columns: 1fr;
+  }
+
   /* What We Do Responsive */
   .services-container {
     grid-template-columns: 1fr;
@@ -740,15 +672,22 @@ body {
   fill: white;
 }
 
-.free-consultation h2 {
-  font-size: 40px;
+.contact-section h2 {
+  font-size: 30px;
   color: #333;
-  margin-bottom: 15px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
-  padding: 10px 0;
+}
+
+.contact-description {
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .buttons-container {
@@ -812,6 +751,15 @@ body {
   text-align: center;
 }
 
+.process h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
 .process-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -852,6 +800,7 @@ body {
   justify-content: center;
   font-size: 1.5rem;
   margin-bottom: 15px;
+  margin: 0 auto;
 }
 
 .process-step h3 {
@@ -870,6 +819,15 @@ body {
   padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
+}
+
+.advantages h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .advantages-container {
@@ -908,9 +866,11 @@ body {
   justify-content: center;
   font-size: 1.2rem;
   margin-bottom: 10px;
+  margin: 0 auto;
 }
 
 .advantage-item p {
   font-size: 1rem;
   color: #555;
+  margin: 5px 0;
 }
