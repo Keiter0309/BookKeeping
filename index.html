@@ -150,17 +150,19 @@
 
           // Load process steps
           const processContainer = document.getElementById("process-container");
-          processContainer.innerHTML = `
-            <div class="process-steps">
-              ${data.process.steps.map((step, index) => `
-                <div class="process-step">
-                  <div class="step-number">${index + 1}</div>
-                  <h3>${step.title}</h3>
-                  <p>${step.description}</p>
-                </div>
-              `).join('')}
-            </div>
-          `;
+          if (data.process && Array.isArray(data.process)) {
+            processContainer.innerHTML = `
+              <div class="process-steps">
+                ${data.process.map((step, index) => `
+                  <div class="process-step">
+                    <div class="step-number">${index + 1}</div>
+                    <h3>${step.title}</h3>
+                    <p>${step.description}</p>
+                  </div>
+                `).join('')}
+              </div>
+            `;
+          }
 
           // Load advantages
           const advantagesContainer = document.getElementById("advantages-container");
