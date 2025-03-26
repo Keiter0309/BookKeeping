@@ -335,6 +335,55 @@ body {
   letter-spacing: 2px;
 }
 
+.trust-section {
+  padding: 80px 0;
+  background: linear-gradient(to bottom, #fff8dc, #fff);
+  border-top: 2px solid rgba(139, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(139, 0, 0, 0.1);
+}
+
+.trust-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.trust-item {
+  text-align: center;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.trust-item:hover {
+  transform: translateY(-10px);
+}
+
+.trust-item i {
+  font-size: 3rem;
+  color: #8b0000;
+  margin-bottom: 20px;
+}
+
+.trust-item h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.trust-item p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 .resources {
   padding: 60px 20px;
   background: #fff;
