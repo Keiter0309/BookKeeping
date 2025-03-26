@@ -265,6 +265,49 @@ body {
   transform: scale(1.05);
 }
 
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff8dc;
+  width: 100%;
+  padding: 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 4px;
+}
+
+.banner-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.banner-features span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.banner-features i {
+  color: #ffd700;
+}
+
+.banner-description {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
 .resources {
   padding: 60px 20px;
   background: #fff;
