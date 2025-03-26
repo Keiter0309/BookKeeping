@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Keeping</title>
+    <title>金鑫當舖 - 專業典當服務</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="stylesheet"
@@ -31,7 +31,7 @@
 
       <!-- Navbar -->
       <nav class="navbar">
-        <div class="logo"><span class="icon">$</span> Book Keeping</div>
+        <div class="logo"><span class="icon">💰</span> 金鑫當舖</div>
         <div class="menu-toggle">
           <i class="fas fa-bars"></i>
         </div>
@@ -42,15 +42,34 @@
       </nav>
     </header>
 
-    <section class="what-we-do" id="服務項目">
-      <h2>服務項目</h2>
+    <!-- Banner Section -->
+    <section class="banner">
+      <img src="assets/banner-placeholder.jpg" alt="金鑫當舖專業服務" class="banner-image">
+      <div class="banner-text">
+        <h1>專業可靠的典當服務</h1>
+        <p>服務超過20年 | 合法立案 | 利率透明</p>
+      </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="services" id="服務項目">
+      <h2>典當服務項目</h2>
       <div class="underline"></div>
       <div class="services-container" id="services-container"></div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="resources">
-      <div class="resources-container" id="resources-container"></div>
+    <!-- Process Section -->
+    <section class="process">
+      <h2>典當流程</h2>
+      <div class="underline"></div>
+      <div class="process-container" id="process-container"></div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages">
+      <h2>服務優勢</h2>
+      <div class="underline"></div>
+      <div class="advantages-container" id="advantages-container"></div>
     </section>
 
     <!-- Features Section -->
@@ -62,8 +81,8 @@
       </div>
     </section>
 
-    <section class="free-consultation">
-      <h2>免費諮詢</h2>
+    <section class="contact-section">
+      <h2>立即諮詢</h2>
       <div class="underline"></div>
       <div class="buttons-container">
         <!-- Call Button -->
@@ -83,12 +102,25 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
-        <p>© 2025 Book Keeping. All rights reserved.</p>
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>營業時間</h3>
+            <p>週一至週六: 09:00 - 21:00</p>
+            <p>週日: 10:00 - 18:00</p>
+          </div>
+          <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 台北市中山區某某路123號</p>
+            <p><i class="fas fa-phone"></i> 0928043112</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 金鑫當舖 版權所有</p>
+        </div>
       </div>
     </footer>
 
-    <!-- JavaScript -->
-        <script>
+    <script>
       // Toggle menu for navbar on mobile
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
@@ -106,7 +138,7 @@
           data.services.forEach((service) => {
             const serviceItem = `
               <div class="service-item">
-                <div class="hexagon">
+                <div class="service-icon">
                   <i class="${service.icon}"></i>
                 </div>
                 <h3>${service.title}</h3>
@@ -115,73 +147,31 @@
             `;
             servicesContainer.innerHTML += serviceItem;
           });
-    
-          // Load resources
-          const resourcesContainer = document.getElementById("resources-container");
-          resourcesContainer.innerHTML = `
-            <div class="resources-columns">
-              <a href="${data.resources.resources.backLink.url}">
-                <div class="column-items">
-                  <div class="resources-column-image">
-                    <img src="${data.resources.resources.image.url}" alt="Resource Icon" class="resource-image" />
-                  </div>
-                  <div class="resources-column">
-                    <h3>${data.resources.resources.title}</h3>
-                    <div class="resources-items">
-                      ${data.resources.resources.items
-                        .map(
-                          (item) => `
-                            <div class="resource-item">
-                              <span class="resource-text">${item}</span>
-                            </div>
-                          `
-                        )
-                        .join("")}
-                    </div>
-                  </div>
+
+          // Load process steps
+          const processContainer = document.getElementById("process-container");
+          processContainer.innerHTML = `
+            <div class="process-steps">
+              ${data.process.steps.map((step, index) => `
+                <div class="process-step">
+                  <div class="step-number">${index + 1}</div>
+                  <h3>${step.title}</h3>
+                  <p>${step.description}</p>
                 </div>
-              </a>
-              <a href="${data.resources.newApplications.backLink.url}" target="_blank">
-                <div class="column-items">
-                  <div class="resources-column-image">
-                    <img src="${data.resources.newApplications.image.url}" alt="Resource Icon" class="resource-image" />
-                  </div>
-                  <div class="resources-column">
-                    <h3>${data.resources.newApplications.title}</h3>
-                    <div class="resources-items">
-                      ${data.resources.newApplications.items
-                        .map(
-                          (item) => `
-                            <div class="resource-item">
-                              <span class="resource-text">${item}</span>
-                            </div>
-                          `
-                        )
-                        .join("")}
-                    </div>
-                  </div>
-                </div>
-              </a>
+              `).join('')}
             </div>
           `;
-    
-          // Load features
-          const featuresContainer = document.getElementById("features-container");
-          featuresContainer.innerHTML = `
-            <div class="feature-list">
-              ${data.features
-                .map(
-                  (feature, index) => `
-                    <div class="feature-item">
-                      <div class="number-container">
-                        <div class="number-bg"></div>
-                        <div class="number">${index + 1}</div>
-                      </div>
-                      <div class="feature-text">${feature}</div>
-                    </div>
-                  `
-                )
-                .join("")}
+
+          // Load advantages
+          const advantagesContainer = document.getElementById("advantages-container");
+          advantagesContainer.innerHTML = `
+            <div class="advantages-grid">
+              ${data.advantages.map((advantage, index) => `
+                <div class="advantage-item">
+                  <div class="advantage-number">${index + 1}</div>
+                  <p>${advantage}</p>
+                </div>
+              `).join('')}
             </div>
           `;
         })
