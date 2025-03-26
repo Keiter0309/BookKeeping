@@ -2,63 +2,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-  scroll-behavior: smooth;
 }
 
-/* Top Bar Styles */
-.top-bar {
-  background: #f5f7fa;
-  padding: 10px 0;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+body {
+  font-family: "Noto Serif TC", "Noto Sans TC", sans-serif;
+  line-height: 1.8;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+  background-color: #fafaf8;
+}
 
+/* Top Bar */
+.top-bar {
+  background-color: #8b0000;
+  color: #fff8dc;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 248, 220, 0.2);
 }
 
 .top-bar-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
-  text-align: left;
-}
-
-.top-bar p {
-  font-size: 14px;
-  color: #555;
-  text-align: left;
+  padding: 0 20px;
+  text-align: right;
 }
 
 .top-bar-link {
-  color: #007bff;
+  color: white;
   text-decoration: none;
+  margin: 0 10px;
   transition: color 0.3s;
-  text-align: left;
 }
 
 .top-bar-link:hover {
-  color: #0056b3;
+  color: #ecf0f1;
 }
 
 .top-bar-link i {
   margin-right: 5px;
 }
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
+  background-color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #ffffff, #f5f7fa);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
-  color: #333;
+  color: #8b0000;
   transition: transform 0.3s;
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 1px;
 }
 
 .logo:hover {
@@ -140,25 +142,13 @@
   display: block;
 }
 
-.social-icons a {
-  margin: 0 12px;
-  color: #007bff;
-  font-size: 20px;
-  text-decoration: none;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #0056b3;
-}
-
 .menu-toggle {
   display: none;
   font-size: 24px;
   color: #333;
   cursor: pointer;
 }
+
 
 /* Contact Us Section Styles */
 .contact-us {
@@ -167,8 +157,8 @@
 }
 
 .contact-background {
-  background: url("path-to-your-image.jpg") no-repeat center center/cover; /* Thay bằng đường dẫn đến hình ảnh của bạn */
-  height: 400px;
+  background: url("../assets/contact-banner.webp") no-repeat center center/cover;
+  height: 600px;
   position: relative;
   display: flex;
   align-items: center;
@@ -181,7 +171,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Lớp phủ tối để làm nổi bật nội dung */
+  /* background: rgba(0, 0, 0, 0); */
   display: flex;
   align-items: center;
   justify-content: center;
